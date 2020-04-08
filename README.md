@@ -6,3 +6,5 @@ Implemented as an AWS Lambda in Python, this function will return multi-word pas
 https://{restapi_id}.execute-api.{region}.amazonaws.com/{stage_name}/passwd?n=3&s=-&ent
 
 I recommended deploying with Alan Beale's [3of6game](http://wordlist.aspell.net/12dicts-readme/#3of6) word list for good results and high entropy.
+
+An example web page, "index.html", illustrates how to parse the returned JSON object.
