@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Three words demo</title></head>
+	<script type="text/javascript">	
+	function refresh(){
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				document.getElementById("password").value = myObj.Password;
+				document.getElementById("entropy").value = myObj.Entropy;
+			}
+		};
+		xmlhttp.open("GET", "https://n7ze9dm4ni.execute-api.eu-west-2.amazonaws.com/default/passwd?n=3&s=-&ent", true);
+		xmlhttp.send();
+	}
+	</script>
+	<body onload="refresh()">
+		<form action="#">
+  			<label for="password">Password:&nbsp;</label>
+  			<input type="text" id="password" name="password" value=""><br />
+  			<label for="entropy">Entropy:&nbsp;</label>
+  			<input type="text" id="entropy" name="entropy" value=""><br />
+  			<input type="button" value="Refresh" onclick="refresh()">
+		</form>
+	</body>
+</html>
