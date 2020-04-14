@@ -1,4 +1,4 @@
-import json, math, random, re
+import json, math, random
 
 MAXLEN = 3 # Number of words to combine (if "len" not supplied)
 DEFSEP = '-' # Default separator to use (if "sep" not supplied)
