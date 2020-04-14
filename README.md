@@ -1,7 +1,7 @@
 # 3words
 A simple passphrase generator
 
-Implemented as an AWS Lambda in Python, this function will return multi-word passphrases. It can be called without parameters, or with optional specifiers for number of words, separator, and whether or not to retun the calculated password entropy, e.g:
+Implemented as an AWS Lambda in Python, this function will return multi-word passphrases. It can be called without parameters, or with optional specifiers for number of words, separator, and whether or not to return the calculated password entropy, e.g:
 
 https://{restapi_id}.execute-api.{region}.amazonaws.com/{stage_name}/passwd?len=3&sep=-&ent
 
