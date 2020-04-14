@@ -11,7 +11,7 @@
 				document.getElementById("entropy").value = myObj.Entropy;
 			}
 		};
-		xmlhttp.open("GET", "https://n7ze9dm4ni.execute-api.eu-west-2.amazonaws.com/default/passwd?n=3&s=-&ent", true);
+		xmlhttp.open("GET", "https://{restapi_id}.execute-api.{region}.amazonaws.com/{stage_name}/passwd?len=3&sep=-&ent", true);
 		xmlhttp.send();
 	}
 	</script>
